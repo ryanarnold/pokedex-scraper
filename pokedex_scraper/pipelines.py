@@ -13,5 +13,7 @@ class PokemonPipeline(object):
         item['height_inches'] = int(item['height_inches'].replace('"', ''))
         item['national_no'] = int(re.sub(r'\#0*', '', item['national_no']))
         item['weight_lbs'] = float(re.sub(r'lbs', '', item['weight_lbs']))
+        item['type1'] = item['type1'].replace('http://www.serebii.net/pokedex-xy/', '').replace('.shtml', '')
+        item['type2'] = item['type2'].replace('http://www.serebii.net/pokedex-xy/', '').replace('.shtml', '')
 
         return item
