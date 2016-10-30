@@ -5,10 +5,18 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Field, Item
 
 
-class PokedexScraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class PokemonItem(Item):
+    eng_name = Field()
+    jap_name = Field()
+    national_no = Field()
+    type1 = Field()
+    type2 = Field()
+    height = Field()
+    weight = Field()
+    classification = Field()
+    ability = Field()
+    flavor_text = Field()
+    evolve = Field()
