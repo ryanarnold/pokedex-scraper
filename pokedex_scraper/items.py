@@ -19,4 +19,3 @@ class PokemonItem(Item):
     classification = Field()
     ability = Field()
     flavor_text = Field()
-    evolve = Field()
