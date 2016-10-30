@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   # 'pokedex_scraper.pipelines.SomePipeline': 300,
+   'pokedex_scraper.pipelines.PokemonPipeline': 300,
    'scrapy.pipelines.images.ImagesPipeline': 400,
 }
 
