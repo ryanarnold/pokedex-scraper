@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from pokedex_scraper.items import PokemonItem
-
+import hashlib
 
 class PokemonSpider(scrapy.Spider):
     name = "pokemon"
@@ -27,4 +27,7 @@ class PokemonSpider(scrapy.Spider):
         pokemon['ability'] = response.css('table.dextable > tbody > tr > td.fooinfo > a > b::text').extract()[0]
         pokemon['flavor_text'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[24]
 
-        return pokemon
+        pokemon['image_urls'] = ['http://localhost/serebii/' + response.css('table.art > tbody > tr > td > img::attr(src)').extract()[0], ]
+        pokemon['url_sha1'] = hashlib.sha1(pokemon['image_urls'][0].encode('utf-8')).hexdigest()
+
+        yield pokemon
