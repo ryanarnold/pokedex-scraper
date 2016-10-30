@@ -19,3 +19,7 @@ class PokemonItem(Item):
     classification = Field()
     ability = Field()
     flavor_text = Field()
+
+    url_sha1 = Field()
+    image_urls = Field()
+    images = Field()
