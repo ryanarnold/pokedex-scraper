@@ -16,7 +16,7 @@ class PokemonItem(Item):
     type2 = Field()
     height_feet = Field()
     height_inches = Field()
-    weight = Field()
+    weight_lbs = Field()
     classification = Field()
     ability = Field()
     flavor_text = Field()

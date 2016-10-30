@@ -23,7 +23,7 @@ class PokemonSpider(scrapy.Spider):
         pokemon['type2'] = response.css('table.dextable > tbody > tr > td.cen > a::attr(href)').extract()[1]
         pokemon['height_feet'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[2].split('\'')[0]
         pokemon['height_inches'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[2].split('\'')[1]
-        pokemon['weight'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[4]
+        pokemon['weight_lbs'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[4]
         pokemon['classification'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[1]
         pokemon['ability'] = response.css('table.dextable > tbody > tr > td.fooinfo > a > b::text').extract()[0]
         pokemon['flavor_text'] = response.css('table.dextable > tbody > tr > td.fooinfo::text').extract()[24]
