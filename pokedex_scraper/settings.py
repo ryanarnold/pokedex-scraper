@@ -92,19 +92,19 @@ IMAGES_STORE = 'scrapped_images/'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_FORMAT = 'CSV'
-FEED_URI = 'feed_exports/export.csv'
-FEED_EXPORT_FIELDS = [
-	'national_no',
-	'eng_name', 
-	'jap_name',
-	'classification',
-	'type1', 
-	'type2',
-	'ability',
-	'height_feet',
-	'height_inches',
-	'weight_lbs',
-	'flavor_text',
-	'url_sha1',
-]
+# FEED_FORMAT = 'JSON'
+# FEED_URI = 'feed_exports/export.json'
+# FEED_EXPORT_FIELDS = [
+# 	'national_no',
+# 	'eng_name', 
+# 	'jap_name',
+# 	'classification',
+# 	'type1', 
+# 	'type2',
+# 	'ability',
+# 	'height_feet',
+# 	'height_inches',
+# 	'weight_lbs',
+# 	'flavor_text',
+# 	'url_sha1',
+# ]
