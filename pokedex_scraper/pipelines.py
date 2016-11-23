@@ -21,4 +21,6 @@ class PokemonPipeline(object):
         abilities = item['ability'].replace('Ability: ', '')
         item['ability'] = [a.strip() for a in abilities.split('&')]
 
+        item['flavor_text'] = item['flavor_text'].strip()
+
         return item
