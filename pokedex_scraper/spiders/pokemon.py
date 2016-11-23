@@ -7,7 +7,7 @@ import re
 class PokemonSpider(scrapy.Spider):
     name = "pokemon"
     allowed_domains = ["serebii.net"]
-    start_urls = ['http://serebii.net/pokedex-rs/' + ('0' * (3 - len(str(x)))) + str(x) + '.shtml' for x in range(1, 152)]
+    start_urls = ['http://serebii.net/pokedex-rs/' + ('0' * (3 - len(str(x)))) + str(x) + '.shtml' for x in range(1, 387)]
     # allowed_domains = ['localhost']
     # start_urls = (
     # 	'http://localhost/serebii',
