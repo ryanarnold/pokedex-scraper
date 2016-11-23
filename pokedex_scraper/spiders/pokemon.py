@@ -16,5 +16,6 @@ class PokemonSpider(scrapy.Spider):
     def parse(self, response):
         pokemon = PokemonItem()
         pokemon['eng_name'] = response.css('table.dextab > tr > td > table > tr > td > font > b::text').extract_first()
+        pokemon['jap_name'] = response.xpath('//table[@width="98%"][1]/tr[2]/td[5]/text()').extract()[1]
 
         yield pokemon

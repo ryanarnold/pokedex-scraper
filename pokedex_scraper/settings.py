@@ -96,11 +96,11 @@ FEED_FORMAT = 'JSON'
 FEED_URI = 'feed_exports/export.json'
 FEED_EXPORT_FIELDS = [
 	# 'national_no',
-	'eng_name', 
-	# 'jap_name',
+	# 'eng_name', 
+	'jap_name',
 	# 'classification',
-	'type1', 
-	'type2',
+	# 'type1', 
+	# 'type2',
 	# 'ability',
 	# 'height_feet',
 	# 'height_inches',
