@@ -95,9 +95,9 @@ IMAGES_STORE = 'scrapped_images/'
 FEED_FORMAT = 'JSON'
 FEED_URI = 'feed_exports/export.json'
 FEED_EXPORT_FIELDS = [
-	# 'national_no',
+	'national_no',
 	# 'eng_name', 
-	'jap_name',
+	# 'jap_name',
 	# 'classification',
 	# 'type1', 
 	# 'type2',
