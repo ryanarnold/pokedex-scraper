@@ -23,5 +23,7 @@ class PokemonSpider(scrapy.Spider):
         pokemon['height_feet'] = response.xpath('//table[@width="98%"][1]/tr[8]/td[4]/text()').extract_first()
         pokemon['weight_lbs'] = response.xpath('//table[@width="98%"][1]/tr[8]/td[5]/text()').extract_first()
         pokemon['classification'] = response.xpath('//table[@width="98%"][1]/tr[8]/td[1]/text()').extract_first()
+        pokemon['ability'] = response.xpath('//table[@width="98%"][1]/tr[3]/td[2]/b/text()').extract_first()
+        pokemon['flavor_text'] = response.xpath('//table[@width="98%"][3]/tr[2]/td[2]/text()').extract_first()
 
         yield pokemon

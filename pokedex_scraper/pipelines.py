@@ -18,4 +18,7 @@ class PokemonPipeline(object):
         item['type2'] = item['type2'].replace('/pokedex-rs/', '').replace('.shtml', '')
         item['classification'] = item['classification'].strip()
 
+        abilities = item['ability'].replace('Ability: ', '')
+        item['ability'] = [a.strip() for a in abilities.split('&')]
+
         return item
