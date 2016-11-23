@@ -26,4 +26,7 @@ class PokemonSpider(scrapy.Spider):
         pokemon['ability'] = response.xpath('//table[@width="98%"][1]/tr[3]/td[2]/b/text()').extract_first()
         pokemon['flavor_text'] = response.xpath('//table[@width="98%"][3]/tr[2]/td[2]/text()').extract_first()
 
+        pokemon['image_urls'] = ['http://serebii.net' + response.xpath('//table[@width="98%"][1]/tr[3]/td[1]/div/table/tr/td/img/@src').extract_first(),]
+        pokemon['url_sha1'] = hashlib.sha1(pokemon['image_urls'][0].encode('utf-8')).hexdigest() 
+
         yield pokemon

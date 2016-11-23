@@ -66,7 +66,7 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'pokedex_scraper.pipelines.PokemonPipeline': 300,
-   # 'scrapy.pipelines.images.ImagesPipeline': 400,
+   'scrapy.pipelines.images.ImagesPipeline': 400,
 }
 
 IMAGES_STORE = 'scrapped_images/'
@@ -96,7 +96,7 @@ FEED_FORMAT = 'JSON'
 FEED_URI = 'feed_exports/export.json'
 FEED_EXPORT_FIELDS = [
 	# 'national_no',
-	# 'eng_name', 
+	'eng_name', 
 	# 'jap_name',
 	# 'classification',
 	# 'type1', 
@@ -105,5 +105,6 @@ FEED_EXPORT_FIELDS = [
 	# 'height_feet',
 	# 'height_inches',
 	# 'weight_lbs',
-	'flavor_text',
+	# 'flavor_text',
+	'url_sha1',
 ]
