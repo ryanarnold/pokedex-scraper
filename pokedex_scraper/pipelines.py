@@ -9,11 +9,11 @@ import re
 class PokemonPipeline(object):
     def process_item(self, item, spider):
         item['eng_name'] = re.sub(r'.* ', '', item['eng_name'])
-        item['height_feet'] = int(item['height_feet'])
-        item['height_inches'] = int(item['height_inches'].replace('"', ''))
-        item['national_no'] = int(re.sub(r'\#0*', '', item['national_no']))
-        item['weight_lbs'] = float(re.sub(r'lbs', '', item['weight_lbs']))
-        item['type1'] = item['type1'].replace('/pokedex-xy/', '').replace('.shtml', '')
-        item['type2'] = item['type2'].replace('/pokedex-xy/', '').replace('.shtml', '')
+        # item['height_feet'] = int(item['height_feet'])
+        # item['height_inches'] = int(item['height_inches'].replace('"', ''))
+        # item['national_no'] = int(re.sub(r'\#0*', '', item['national_no']))
+        # item['weight_lbs'] = float(re.sub(r'lbs', '', item['weight_lbs']))
+        # item['type1'] = item['type1'].replace('/pokedex-xy/', '').replace('.shtml', '')
+        # item['type2'] = item['type2'].replace('/pokedex-xy/', '').replace('.shtml', '')
 
         return item
