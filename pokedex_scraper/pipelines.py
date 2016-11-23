@@ -14,7 +14,7 @@ class PokemonPipeline(object):
         # item['height_feet'] = int(item['height_feet'])
         # item['height_inches'] = int(item['height_inches'].replace('"', ''))
         # item['weight_lbs'] = float(re.sub(r'lbs', '', item['weight_lbs']))
-        # item['type1'] = item['type1'].replace('/pokedex-xy/', '').replace('.shtml', '')
-        # item['type2'] = item['type2'].replace('/pokedex-xy/', '').replace('.shtml', '')
+        item['type1'] = item['type1'].replace('/pokedex-rs/', '').replace('.shtml', '')
+        item['type2'] = item['type2'].replace('/pokedex-rs/', '').replace('.shtml', '')
 
         return item
