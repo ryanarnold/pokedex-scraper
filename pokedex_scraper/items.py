@@ -24,3 +24,8 @@ class PokemonItem(Item):
     url_sha1 = Field()
     image_urls = Field()
     images = Field()
+
+class SpriteItem(Item):
+    url_sha1 = Field()
+    file_urls = Field()
+    files = Field()

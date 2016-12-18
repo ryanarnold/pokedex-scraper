@@ -65,11 +65,11 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'pokedex_scraper.pipelines.PokemonPipeline': 300,
-   'scrapy.pipelines.images.ImagesPipeline': 400,
+   # 'pokedex_scraper.pipelines.PokemonPipeline': 300,
+   'scrapy.pipelines.files.FilesPipeline': 400,
 }
 
-IMAGES_STORE = 'scrapped_images/'
+FILES_STORE = 'scrapped_images/'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -92,19 +92,19 @@ IMAGES_STORE = 'scrapped_images/'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_FORMAT = 'JSON'
-FEED_URI = 'feed_exports/export.json'
-FEED_EXPORT_FIELDS = [
-	'national_no',
-	'eng_name', 
-	'jap_name',
-	'classification',
-	'type1', 
-	'type2',
-	'ability',
-	'height_feet',
-	'height_inches',
-	'weight_lbs',
-	'flavor_text',
-	'url_sha1',
-]
+# FEED_FORMAT = 'JSON'
+# FEED_URI = 'feed_exports/export.json'
+# FEED_EXPORT_FIELDS = [
+# 	'national_no',
+# 	'eng_name', 
+# 	'jap_name',
+# 	'classification',
+# 	'type1', 
+# 	'type2',
+# 	'ability',
+# 	'height_feet',
+# 	'height_inches',
+# 	'weight_lbs',
+# 	'flavor_text',
+# 	'url_sha1',
+# ]
